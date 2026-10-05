@@ -20,22 +20,37 @@
 <body>
   <a class="visually-hidden-focusable salto" href="#contenido">Saltar al contenido</a>
 
-  <header>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#trayectoria">Trayectoria</a></li>
-        <li><a href="#herramientas">Herramientas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">Alexander Urvina</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+            <li class="nav-item"><a class="nav-link" href="#herramientas">Herramientas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main id="contenido">
-    <section id="inicio" aria-labelledby="titulo-inicio">
-      <div class="container">
-        <h1 id="titulo-inicio">Hans Alexander Urvina Colín</h1>
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <div class="container hero-contenido">
+        <h1 id="titulo-inicio" class="hero-nombre">Hans Alexander <span class="d-block">Urvina Colín</span></h1>
+        <p class="hero-titulo">Desarrollador Java Full Stack Jr.</p>
+        <p class="hero-frase">Me interesa el punto donde la operación de un negocio se convierte en requerimientos, datos y software.</p>
+        <p class="hero-apoyo">Ingeniero en Ciencia y Tecnología del Agua por la UAM Lerma, con varios años en operación retail y trabajo freelance de análisis de datos y automatización en Excel/VBA.</p>
+        <div class="hero-acciones">
+          <a class="btn btn-senal" href="#proyectos">Ver proyectos</a>
+          <a href="https://www.linkedin.com/in/hans-alexander-urvina-colin">LinkedIn</a>
+          <a href="https://github.com/alexanderurvina">GitHub</a>
+        </div>
       </div>
     </section>
 

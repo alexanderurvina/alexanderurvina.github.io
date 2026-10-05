@@ -76,6 +76,11 @@
 
 /* 3. Base
    -------------------------------------------------------------------------- */
+/* El navbar queda fijo arriba: al saltar a una sección, deja ese espacio libre */
+html {
+  scroll-padding-top: 5rem;
+}
+
 body {
   background-color: var(--c-pizarra);
   font-stretch: var(--ancho-normal);
@@ -84,9 +89,17 @@ body {
 /* Foco visible para quien navega con teclado */
 :focus-visible,
 .btn:focus-visible,
-.nav-link:focus-visible {
+.nav-link:focus-visible,
+.navbar-toggler:focus-visible {
   outline: 2px solid var(--c-senal);
   outline-offset: 3px;
+}
+
+/* Bootstrap dibuja el foco de estos componentes con sombra; aquí no usamos sombras */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 
@@ -143,10 +156,93 @@ p {
 }
 
 
+/* Navbar: colores propios sobre las variables de Bootstrap */
+header {
+  background-color: var(--c-pizarra);
+  border-bottom: 1px solid var(--c-isolinea);
+}
+
+.navbar {
+  --bs-navbar-color: var(--c-grafito);
+  --bs-navbar-hover-color: var(--c-hueso);
+  --bs-navbar-active-color: var(--c-senal);
+  --bs-navbar-brand-color: var(--c-hueso);
+  --bs-navbar-brand-hover-color: var(--c-hueso);
+  --bs-navbar-toggler-border-color: var(--c-grafito);
+  --bs-navbar-toggler-border-radius: 0;
+}
+
+.navbar-brand {
+  font-stretch: var(--ancho-condensado);
+  font-weight: 800;
+}
+
+.nav-link {
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 500;
+}
+
+/* Botón principal: cinta amarilla; al pasar el cursor se vacía */
+.btn-senal {
+  --bs-btn-color: var(--c-pizarra);
+  --bs-btn-bg: var(--c-senal);
+  --bs-btn-border-color: var(--c-senal);
+  --bs-btn-hover-color: var(--c-senal);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--c-senal);
+  --bs-btn-active-color: var(--c-senal);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--c-senal);
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-weight: 600;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.75rem;
+}
+
 /* 6. Secciones
    -------------------------------------------------------------------------- */
 main > section {
   padding-block: 4rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;   /* las isolíneas que se salen no generan scroll horizontal */
+  padding-block: 6rem;
+}
+
+.hero-contenido {
+  position: relative;   /* queda por encima del SVG */
+}
+
+.hero-nombre {
+  text-transform: uppercase;   /* única excepción de mayúsculas del sitio */
+  margin-bottom: 1.5rem;
+}
+
+.hero-titulo {
+  font-size: var(--fs-md);
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero-frase {
+  font-size: var(--fs-md);
+  max-width: 40ch;
+}
+
+.hero-apoyo {
+  color: var(--c-grafito);
+  margin-bottom: 2rem;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
 }
 
 
@@ -167,5 +263,4 @@ main > section {
 
 
 /* 8. Media queries
-   Se llenan en las sesiones de hero (movimiento reducido) y responsive.
    -------------------------------------------------------------------------- */
