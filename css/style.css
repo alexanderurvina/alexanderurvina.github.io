@@ -278,6 +278,34 @@ header {
   margin-bottom: 0;
 }
 
+/* Imágenes dentro de un caso: diagrama y galería de wireframes */
+.diagrama {
+  margin-bottom: 2rem;
+}
+
+.galeria figure {
+  margin-bottom: 0;
+}
+
+.diagrama img,
+.galeria img {
+  display: block;
+  width: 100%;
+  height: auto;          /* respeta la proporción original: no se deforma */
+  border: 1px solid var(--c-isolinea);
+}
+
+/* El diagrama no se estira más allá de su tamaño real (se vería borroso) */
+.diagrama img {
+  width: auto;
+  max-width: 100%;
+}
+
+.diagrama figcaption,
+.galeria figcaption {
+  margin-top: 0.5rem;
+}
+
 /* Isolíneas del dipolo: solo trazo, sin relleno */
 .dipolo path {
   fill: none;
