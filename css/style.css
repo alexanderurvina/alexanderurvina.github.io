@@ -67,6 +67,9 @@
 
   --bs-focus-ring-color: rgba(227, 192, 74, 0.5);
 
+  /* Bootstrap pinta <code> en rosa; aquí va en el color del texto */
+  --bs-code-color: var(--c-hueso);
+
   --bs-body-font-family: var(--font-base);
   --bs-body-font-size: var(--fs-base);
   --bs-body-font-weight: 400;
@@ -253,6 +256,36 @@ header {
 
 .proyecto-meta dd {
   margin: 0;
+}
+
+/* Otros proyectos: lista compacta, sin ficha lateral */
+.otros-titulo {
+  margin-top: 4rem;
+}
+
+.otros-lista {
+  border-top: 1px solid var(--c-isolinea);
+  margin-top: 1.5rem;
+}
+
+.otro {
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--c-isolinea);
+}
+
+.otro p {
+  margin-bottom: 0.75rem;
+}
+
+.caso h5 {
+  font-size: var(--fs-md);
+  font-stretch: var(--ancho-condensado);
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+.caso h5:first-child {
+  margin-top: 0;
 }
 
 /* Caso desplegado: superficie elevada */

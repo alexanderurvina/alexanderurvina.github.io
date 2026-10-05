@@ -169,6 +169,122 @@
               </div>
             </div>
           </article>
+
+          <!-- Agenda de contactos -->
+          <article class="proyecto" aria-labelledby="agenda-titulo">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <h3 id="agenda-titulo">Agenda de contactos en Java</h3>
+                <p class="proyecto-resumen">Agenda de contactos en Java desarrollada por un equipo de 9 personas en el Hackathon 2 del bootcamp.</p>
+                <p><strong>Mi parte:</strong> propuse dividir el proyecto en capas y escribí el menú por consola.</p>
+                <button class="btn btn-caso collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-agenda" aria-expanded="false" aria-controls="caso-agenda">
+                  <span class="abrir">Ver caso<span class="visually-hidden"> de la agenda de contactos</span></span>
+                  <span class="cerrar">Cerrar caso<span class="visually-hidden"> de la agenda de contactos</span></span>
+                </button>
+              </div>
+              <div class="col-lg-4">
+                <dl class="proyecto-meta">
+                  <dt class="meta">Rol</dt>
+                  <dd>Estructura del proyecto y menú</dd>
+                  <dt class="meta">Equipo</dt>
+                  <dd>9 personas</dd>
+                  <dt class="meta">Año</dt>
+                  <dd>2026</dd>
+                  <dt class="meta">Herramientas</dt>
+                  <dd>Java 21, Gradle, JUnit 6 (pruebas del equipo), Git/GitHub con ramas y Pull Requests</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="collapse" id="caso-agenda">
+              <div class="caso">
+                <h4>Contexto</h4>
+                <p>Proyecto del Hackathon 2 del bootcamp: una agenda de contactos en Java, desarrollada por un equipo de 9 personas.</p>
+
+                <h4>Qué hice</h4>
+                <ul>
+                  <li>Propuse dividir el proyecto en capas: <code>Contacto</code> (modelo), <code>Agenda</code> (lógica de negocio), <code>Menu</code> (presentación por consola) y <code>Main</code> (punto de entrada).</li>
+                  <li>Escribí <code>Menu.java</code>: un ciclo <code>do-while</code> con 8 opciones, un <code>switch</code> y validación de la entrada con <code>hasNextInt</code>.</li>
+                  <li>Reescribí <code>Main.java</code>.</li>
+                </ul>
+
+                <h4>Decisiones</h4>
+                <ul>
+                  <li><strong>Separar el proyecto en capas.</strong> Así cada integrante podía trabajar su clase en su propia rama, sin pisar el trabajo de los demás.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <p>La versión final del equipo reemplazó la consola por una interfaz Swing. <code>Menu.java</code> sigue en el repositorio, pero ya no se usa.</p>
+
+                <h4>Evidencia</h4>
+                <ul>
+                  <li><a href="https://github.com/Sebastian-Aldaco/Agenda">Repositorio del equipo en GitHub</a></li>
+                  <li><a href="https://github.com/Sebastian-Aldaco/Agenda/pull/5">Mi Pull Request (#5)</a></li>
+                  <li><a href="https://github.com/Sebastian-Aldaco/Agenda/blob/main/src/main/java/org/generation/Menu.java"><code>Menu.java</code></a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="otros-titulo">Otros proyectos</h3>
+        <div class="otros-lista">
+          <!-- Tesis -->
+          <article class="otro" aria-labelledby="tesis-titulo">
+            <h4 id="tesis-titulo">Caracterización magnética de un sistema acuífero</h4>
+            <p>Tesis de licenciatura: levantamiento magnético terrestre en una zona de disposición final de residuos en Almoloya del Río, Estado de México. Proyecto individual.</p>
+            <p class="meta">2025. Magnetómetro G-857, Surfer 16 y Excel.</p>
+            <button class="btn btn-caso btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-tesis" aria-expanded="false" aria-controls="caso-tesis">
+              <span class="abrir">Ver detalle<span class="visually-hidden"> de la tesis</span></span>
+              <span class="cerrar">Cerrar detalle<span class="visually-hidden"> de la tesis</span></span>
+            </button>
+
+            <div class="collapse" id="caso-tesis">
+              <div class="caso">
+                <h5>Contexto</h5>
+                <p>Tesis de licenciatura en Ingeniería en Ciencia y Tecnología del Agua (UAM Lerma): <cite>Caracterización magnética del sistema acuífero en una zona de disposición final de residuos en Almoloya del Río</cite>. No está publicada en línea.</p>
+                <p>Proyectos relacionados en la carrera: servicio social en Santa María Jajalpa (19 muestras de suelo para conductividad hidráulica y porosidad efectiva) y un proyecto de infiltración con sondeos eléctricos verticales.</p>
+
+                <h5>Qué hice</h5>
+                <ul>
+                  <li>Planifiqué la ruta de medición y realicé el levantamiento magnético terrestre en 0.88 km² con un magnetómetro G-857.</li>
+                  <li>Procesé los datos, elaboré los mapas magnéticos en Surfer 16 y los perfiles en Excel.</li>
+                  <li>Interpreté los perfiles y mapas.</li>
+                </ul>
+
+                <h5>Decisiones</h5>
+                <ul>
+                  <li><strong>Estudiar un basurero a cielo abierto.</strong> Quería conocer cómo dispone el gobierno de nuestros residuos.</li>
+                  <li><strong>Usar el método magnético.</strong> Ya había usado sondeos eléctricos verticales en otros experimentos, pero para llegar profundo necesitan abrir mucho los electrodos, y el área era pequeña. El método magnético daba una visión más amplia de los estratos.</li>
+                </ul>
+
+                <h5>Resultado</h5>
+                <p>A partir de los perfiles y mapas magnéticos, la tesis interpreta filtraciones de lixiviados hacia el acuífero que alimenta el pozo de la región de Santiago Tianguistenco y Almoloya del Río.</p>
+
+                <h5>Figuras de la tesis</h5>
+                <div class="row g-3 galeria">
+                  <figure class="col-md-4">
+                    <a href="assets/img/planificacion-ruta.png">
+                      <img src="assets/img/planificacion-ruta.png" width="362" height="313" loading="lazy" alt="Imagen satelital del área de estudio con coordenadas UTM y los puntos de medición planeados, marcados en azul, distribuidos en líneas sobre la zona de disposición de residuos.">
+                    </a>
+                    <figcaption class="meta">Planificación de la ruta de medición. Imagen base: Google Earth.</figcaption>
+                  </figure>
+                  <figure class="col-md-4">
+                    <a href="assets/img/campo-magnetico-total.png">
+                      <img src="assets/img/campo-magnetico-total.png" width="723" height="493" loading="lazy" alt="Mapa del campo magnético total corregido sobre una imagen satelital del área de estudio, con isolíneas, coordenadas UTM y una escala de color de 35,200 a 40,800 nanoteslas.">
+                    </a>
+                    <figcaption class="meta">Campo magnético total corregido (correcciones diurnas y regionales), elaborado en Surfer 16. Imagen base: Google Earth.</figcaption>
+                  </figure>
+                  <figure class="col-md-4">
+                    <a href="assets/img/perfiles-magnetometro.png">
+                      <img src="assets/img/perfiles-magnetometro.png" width="603" height="391" loading="lazy" alt="Cuatro gráficas de los perfiles magnéticos 9 a 12: campo magnético en nanoteslas contra la distancia en metros a lo largo de cada perfil.">
+                    </a>
+                    <figcaption class="meta">Perfiles magnéticos 9 a 12, elaborados en Excel</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
