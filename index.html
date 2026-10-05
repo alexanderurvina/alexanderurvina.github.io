@@ -225,6 +225,66 @@
               </div>
             </div>
           </article>
+
+          <!-- Gryffindor Resistance (Hackathon 1) -->
+          <article class="proyecto" aria-labelledby="gryffindor-titulo">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <h3 id="gryffindor-titulo">Gryffindor Resistance</h3>
+                <p class="proyecto-resumen">Sitio web estático sobre la casa Gryffindor, hecho por un equipo de 12 personas en el Hackathon 1 del bootcamp: personajes, formulario de reclutamiento y tienda con carrito.</p>
+                <p><strong>Mi parte:</strong> escribí el HTML y el CSS del formulario de reclutamiento y propuse dividir su desarrollo en capas.</p>
+                <button class="btn btn-caso collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-gryffindor" aria-expanded="false" aria-controls="caso-gryffindor">
+                  <span class="abrir">Ver caso<span class="visually-hidden"> de Gryffindor Resistance</span></span>
+                  <span class="cerrar">Cerrar caso<span class="visually-hidden"> de Gryffindor Resistance</span></span>
+                </button>
+              </div>
+              <div class="col-lg-4">
+                <dl class="proyecto-meta">
+                  <dt class="meta">Rol</dt>
+                  <dd>Frontend</dd>
+                  <dt class="meta">Equipo</dt>
+                  <dd>12 personas</dd>
+                  <dt class="meta">Año</dt>
+                  <dd>2026</dd>
+                  <dt class="meta">Herramientas</dt>
+                  <dd>HTML, CSS, Bootstrap 5.3, JavaScript, localStorage, Git/GitHub</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="collapse" id="caso-gryffindor">
+              <div class="caso">
+                <h4>Contexto</h4>
+                <p>Proyecto del Hackathon 1 del bootcamp: un sitio web estático, sin backend ni base de datos, sobre la casa Gryffindor. Los voluntarios que se registran en el formulario se guardan en el navegador con <code>localStorage</code> y se muestran como tarjetas.</p>
+
+                <h4>Qué hice</h4>
+                <ul>
+                  <li>Escribí el formulario de reclutamiento: nombre, correo, edad (de 11 a 120), cualidad y motivo, todos obligatorios, con un mensaje de error para cada campo.</li>
+                  <li>Escribí sus estilos y definí los colores de la casa como variables CSS en <code>:root</code>.</li>
+                  <li>Propuse dividir el desarrollo del formulario en cuatro capas: estructura y presentación (HTML y CSS), DOM y eventos, persistencia en <code>localStorage</code>, y render de las tarjetas.</li>
+                </ul>
+                <p>El JavaScript del formulario lo escribieron otros integrantes del equipo.</p>
+
+                <h4>Decisiones</h4>
+                <ul>
+                  <li><strong>Usar los atributos <code>name</code> de cada campo como contrato con el JavaScript.</strong> Así mis compañeros podían leer los datos del formulario sin depender de cómo estuviera armado el HTML.</li>
+                  <li><strong>Dividir el formulario en capas.</strong> Así cada quien trabajaba en lo suyo, sin generar ruido que confundiera a los demás.</li>
+                  <li><strong>Pensar el formulario como el de un sitio de reclutamiento.</strong> Por eso, además de los datos de contacto, pide la cualidad que mejor describe a la persona y su motivo para unirse.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <p>El sitio está publicado en GitHub Pages. Los voluntarios registrados se guardan en el navegador y se vuelven a mostrar al recargar la página.</p>
+                <p>La validación que diseñé en el formulario no llega a mostrarse, porque el JavaScript no la activa al enviar (falta llamar a <code>checkValidity()</code>). Quedó registrada en el backlog del equipo.</p>
+
+                <h4>Evidencia</h4>
+                <ul>
+                  <li><a href="https://danielcastroperez.github.io/Gryffindor-Resistance/">Sitio publicado</a></li>
+                  <li><a href="https://github.com/DanielCastroPerez/Gryffindor-Resistance">Repositorio del equipo en GitHub</a></li>
+                  <li><a href="https://github.com/DanielCastroPerez/Gryffindor-Resistance/pull/7">Mi Pull Request (#7)</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
         </div>
 
         <h3 class="otros-titulo">Otros proyectos</h3>
