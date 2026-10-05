@@ -199,6 +199,85 @@ header {
   --bs-btn-padding-y: 0.75rem;
 }
 
+/* Botón secundario para abrir un caso: borde gris, sin el amarillo del principal */
+.btn-caso {
+  --bs-btn-color: var(--c-hueso);
+  --bs-btn-border-color: var(--c-grafito);
+  --bs-btn-hover-color: var(--c-hueso);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--c-hueso);
+  --bs-btn-active-color: var(--c-hueso);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--c-hueso);
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-weight: 600;
+}
+
+/* Bootstrap le pone la clase .collapsed al botón cuando el caso está cerrado.
+   Con eso mostramos "Ver caso" o "Cerrar caso" sin JavaScript propio. */
+.btn-caso .cerrar,
+.btn-caso:not(.collapsed) .abrir {
+  display: none;
+}
+
+.btn-caso:not(.collapsed) .cerrar {
+  display: inline;
+}
+
+/* Fila de proyecto: a todo el ancho, separada por isolíneas */
+.proyectos-lista {
+  border-top: 1px solid var(--c-isolinea);
+  margin-top: 2rem;
+}
+
+.proyecto {
+  padding-block: 2.5rem;
+  border-bottom: 1px solid var(--c-isolinea);
+}
+
+.proyecto-resumen {
+  font-size: var(--fs-md);
+}
+
+/* Metadatos: pares dato-valor en dos columnas */
+.proyecto-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+}
+
+.proyecto-meta dt {
+  padding-top: 0.15rem;   /* alinea el texto chico con la línea del valor */
+}
+
+.proyecto-meta dd {
+  margin: 0;
+}
+
+/* Caso desplegado: superficie elevada */
+.caso {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--c-pizarra-alta);
+}
+
+.caso li {
+  max-width: var(--lectura);
+}
+
+.caso h4 {
+  margin-top: 2rem;
+}
+
+.caso h4:first-child {
+  margin-top: 0;
+}
+
+.caso > :last-child {
+  margin-bottom: 0;
+}
+
 /* Isolíneas del dipolo: solo trazo, sin relleno */
 .dipolo path {
   fill: none;
@@ -297,6 +376,13 @@ main > section {
 
 /* 8. Media queries
    -------------------------------------------------------------------------- */
+
+/* Celular: menos relleno en el caso para dejarle más ancho al texto */
+@media (max-width: 575.98px) {
+  .caso {
+    padding: 1.5rem 1.25rem;
+  }
+}
 
 /* En pantallas angostas el texto ocupa todo el ancho y queda encima de las
    isolíneas: se atenúan para que no le resten legibilidad */
