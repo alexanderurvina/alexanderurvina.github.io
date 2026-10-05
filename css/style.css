@@ -1,6 +1,171 @@
 /* ==========================================================================
-   Portafolio de Hans Alexander Urvina
-   Hoja de estilos propia. Se carga después de Bootstrap.
-   Los bloques (tokens, base, tipografía, componentes, secciones,
-   utilidades, media queries) se definen en la Sesión 2.
+   Portafolio de Hans Alexander Urvina Colín
+   Hoja de estilos propia. Se carga después de Bootstrap, así que cuando
+   un selector tiene la misma especificidad, gana la regla de este archivo.
+
+   1. Tokens
+   2. Tema de Bootstrap (variables --bs-*)
+   3. Base
+   4. Tipografía
+   5. Componentes
+   6. Secciones
+   7. Utilidades
+   8. Media queries
    ========================================================================== */
+
+
+/* 1. Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Color (concepto "Mapa de campo") */
+  --c-pizarra: #16222A;       /* fondo general */
+  --c-pizarra-alta: #1D2C35;  /* superficies elevadas */
+  --c-isolinea: #2C3B44;      /* isolíneas, divisores y bordes (solo decorativo) */
+  --c-hueso: #E9E6DF;         /* texto principal, 13:1 sobre pizarra */
+  --c-grafito: #8A949B;       /* texto secundario, 5.2:1 sobre pizarra */
+  --c-senal: #E3C04A;         /* acento único: activo, foco y botón principal */
+
+  /* Tipografía */
+  --font-base: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-sm: 0.875rem;                     /* metadatos */
+  --fs-base: 1rem;                       /* cuerpo */
+  --fs-md: 1.25rem;                      /* subtítulos */
+  --fs-lg: 1.75rem;                      /* títulos de proyecto (h3) */
+  --fs-xl: 2.5rem;                       /* títulos de sección (h2) */
+  --fs-hero: clamp(3rem, 9vw, 7rem);     /* nombre en el hero (h1) */
+
+  /* Ancho de Archivo (eje wdth) */
+  --ancho-condensado: 75%;      /* títulos */
+  --ancho-semicondensado: 87.5%; /* metadatos */
+  --ancho-normal: 100%;         /* cuerpo */
+
+  --lectura: 68ch;              /* ancho máximo de línea */
+}
+
+
+/* 2. Tema de Bootstrap
+   Bootstrap define sus colores oscuros en [data-bs-theme=dark]. Usamos el
+   mismo selector: misma especificidad + este archivo carga después = gana.
+   -------------------------------------------------------------------------- */
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--c-pizarra);
+  --bs-body-bg-rgb: 22, 34, 42;
+  --bs-body-color: var(--c-hueso);
+  --bs-body-color-rgb: 233, 230, 223;
+  --bs-emphasis-color: var(--c-hueso);
+  --bs-heading-color: var(--c-hueso);
+  --bs-secondary-color: var(--c-grafito);
+  --bs-secondary-bg: var(--c-pizarra-alta);
+  --bs-tertiary-bg: var(--c-pizarra-alta);
+  --bs-border-color: var(--c-isolinea);
+
+  /* Los enlaces de texto van en hueso; el amarillo solo al pasar el cursor */
+  --bs-link-color: var(--c-hueso);
+  --bs-link-color-rgb: 233, 230, 223;
+  --bs-link-hover-color: var(--c-senal);
+  --bs-link-hover-color-rgb: 227, 192, 74;
+
+  --bs-focus-ring-color: rgba(227, 192, 74, 0.5);
+
+  --bs-body-font-family: var(--font-base);
+  --bs-body-font-size: var(--fs-base);
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.6;
+}
+
+
+/* 3. Base
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--c-pizarra);
+  font-stretch: var(--ancho-normal);
+}
+
+/* Foco visible para quien navega con teclado */
+:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--c-senal);
+  outline-offset: 3px;
+}
+
+
+/* 4. Tipografía
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-stretch: var(--ancho-condensado);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: var(--fs-hero);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+h4 {
+  font-size: var(--fs-md);
+}
+
+p {
+  max-width: var(--lectura);
+}
+
+
+/* 5. Componentes
+   -------------------------------------------------------------------------- */
+
+/* Enlace "Saltar al contenido": aparece arriba a la izquierda al recibir foco */
+.salto:focus {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1100;
+  padding: 0.5rem 1rem;
+  background-color: var(--c-senal);
+  color: var(--c-pizarra);
+  font-weight: 600;
+}
+
+/* Hueco de contenido que Hans todavía no entrega */
+.pendiente {
+  outline: 1px dotted var(--c-grafito);
+  outline-offset: 2px;
+  color: var(--c-grafito);
+}
+
+
+/* 6. Secciones
+   -------------------------------------------------------------------------- */
+main > section {
+  padding-block: 4rem;
+}
+
+
+/* 7. Utilidades
+   -------------------------------------------------------------------------- */
+
+/* Metadatos: semicondensado, gris, en minúsculas con mayúscula inicial */
+.meta {
+  font-size: var(--fs-sm);
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 500;
+  color: var(--c-grafito);
+}
+
+.lectura {
+  max-width: var(--lectura);
+}
+
+
+/* 8. Media queries
+   Se llenan en las sesiones de hero (movimiento reducido) y responsive.
+   -------------------------------------------------------------------------- */
