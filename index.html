@@ -19,8 +19,12 @@
 
   <!-- Estilos propios: van después de Bootstrap para poder sobrescribirlo -->
   <link href="css/style.css" rel="stylesheet">
+
+  <!-- JavaScript propio. defer: se ejecuta cuando el HTML terminó de cargarse -->
+  <script src="js/main.js" defer></script>
 </head>
-<body>
+<!-- Scrollspy de Bootstrap: resalta en el menú la sección que se está viendo -->
+<body data-bs-spy="scroll" data-bs-target="#menu">
   <a class="visually-hidden-focusable salto" href="#contenido">Saltar al contenido</a>
 
   <header class="sticky-top">
@@ -474,13 +478,35 @@
     <section id="contacto" aria-labelledby="titulo-contacto">
       <div class="container">
         <h2 id="titulo-contacto">Contacto</h2>
+        <p class="contacto-intro">Me interesan los roles de análisis funcional, requerimientos, procesos y operaciones con enfoque tecnológico.</p>
+
+        <ul class="contacto-lista">
+          <li>
+            <span class="meta">Correo</span>
+            <a href="mailto:alexanderurvinacolin@gmail.com">alexanderurvinacolin@gmail.com</a>
+          </li>
+          <li>
+            <span class="meta">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/hans-alexander-urvina-colin">hans-alexander-urvina-colin</a>
+          </li>
+          <li>
+            <span class="meta">GitHub</span>
+            <a href="https://github.com/alexanderurvina">alexanderurvina</a>
+          </li>
+          <li>
+            <span class="meta">CV</span>
+            <!-- PENDIENTE: CV corregido (fechas y títulos iguales al portafolio, sin teléfono) en assets/docs/ -->
+            <span class="pendiente">[PENDIENTE: CV en PDF]</span>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="pie">
     <div class="container">
       <p>Hans Alexander Urvina Colín</p>
+      <p class="meta">Sitio hecho con HTML, CSS y Bootstrap. <a href="https://github.com/alexanderurvina/alexanderurvina.github.io">Ver el código en GitHub</a>.</p>
     </div>
   </footer>
 

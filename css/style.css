@@ -489,6 +489,44 @@ main > section {
 }
 
 
+/* Contacto */
+.contacto-intro {
+  font-size: var(--fs-md);
+  margin-top: 1.5rem;
+}
+
+.contacto-lista {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem 0 0;
+  max-width: 40rem;
+}
+
+.contacto-lista li {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.contacto-lista a {
+  font-size: var(--fs-md);
+  overflow-wrap: anywhere;   /* el correo largo se parte en celular en vez de desbordarse */
+}
+
+/* Footer */
+.pie {
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.pie p {
+  margin-bottom: 0.25rem;
+}
+
+
 /* 7. Utilidades
    -------------------------------------------------------------------------- */
 
