@@ -199,6 +199,29 @@ header {
   --bs-btn-padding-y: 0.75rem;
 }
 
+/* Isolíneas del dipolo: solo trazo, sin relleno */
+.dipolo path {
+  fill: none;
+  stroke: var(--c-isolinea);
+  stroke-width: 1.5;
+  /* pathLength="1" en el HTML hace que cada línea "mida" 1:
+     un guion de largo 1 cubre la línea completa */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.dipolo .senal {
+  stroke: var(--c-senal);
+  stroke-opacity: 0.4;
+}
+
+/* Mover el guion de 1 a 0 hace que la línea se vaya dibujando */
+@keyframes dibujar {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+
+
 /* 6. Secciones
    -------------------------------------------------------------------------- */
 main > section {
@@ -210,6 +233,16 @@ main > section {
   position: relative;
   overflow: hidden;   /* las isolíneas que se salen no generan scroll horizontal */
   padding-block: 6rem;
+}
+
+.dipolo {
+  position: absolute;
+  top: 50%;
+  right: -4rem;
+  height: 115%;
+  width: auto;
+  aspect-ratio: 515 / 620;
+  transform: translateY(-50%);
 }
 
 .hero-contenido {
@@ -264,3 +297,20 @@ main > section {
 
 /* 8. Media queries
    -------------------------------------------------------------------------- */
+
+/* En pantallas angostas el texto ocupa todo el ancho y queda encima de las
+   isolíneas: se atenúan para que no le resten legibilidad */
+@media (max-width: 991.98px) {
+  .dipolo {
+    opacity: 0.5;
+  }
+}
+
+/* La animación solo corre si el sistema NO pide movimiento reducido.
+   Con movimiento reducido, las líneas aparecen ya dibujadas. */
+@media (prefers-reduced-motion: no-preference) {
+  .dipolo path {
+    animation: dibujar 1.8s ease-out both;
+    animation-delay: calc(var(--i) * 0.12s);   /* --i viene del HTML: 0, 1, 2… */
+  }
+}
