@@ -419,6 +419,76 @@ main > section {
 }
 
 
+/* Trayectoria */
+.trayectoria-intro {
+  font-size: var(--fs-md);
+  margin-top: 1.5rem;
+}
+
+.trayectoria-subtitulo,
+.herramientas-nivel {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+}
+
+/* Línea de tiempo: el año a la izquierda funciona como marcador */
+.linea-tiempo,
+.formacion,
+.herramientas-lista {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.linea-tiempo li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.linea-tiempo-fecha {
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;   /* los dígitos ocupan el mismo ancho y se alinean */
+  color: var(--c-grafito);
+}
+
+.linea-tiempo p,
+.formacion p {
+  margin-bottom: 0;
+}
+
+.formacion li {
+  padding-block: 1rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.trayectoria-musica {
+  margin-top: 3rem;
+  color: var(--c-grafito);
+}
+
+/* Herramientas */
+.herramientas-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-block: 0.6rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+/* Ícono monocromático en gris: acompaña al nombre sin competir con él */
+.herramientas-lista .bi {
+  flex: 0 0 1.5rem;     /* todos ocupan el mismo ancho: los nombres quedan alineados */
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+  color: var(--c-grafito);
+}
+
+
 /* 7. Utilidades
    -------------------------------------------------------------------------- */
 
@@ -437,6 +507,14 @@ main > section {
 
 /* 8. Media queries
    -------------------------------------------------------------------------- */
+
+/* Celular: la fecha de la línea de tiempo pasa arriba del texto */
+@media (max-width: 575.98px) {
+  .linea-tiempo li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
 
 /* Celular: menos relleno en el caso para dejarle más ancho al texto */
 @media (max-width: 575.98px) {
