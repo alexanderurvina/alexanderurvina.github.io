@@ -1,0 +1,579 @@
+/* ==========================================================================
+   Portafolio de Hans Alexander Urvina Colín
+   Hoja de estilos propia. Se carga después de Bootstrap, así que cuando
+   un selector tiene la misma especificidad, gana la regla de este archivo.
+
+   1. Tokens
+   2. Tema de Bootstrap (variables --bs-*)
+   3. Base
+   4. Tipografía
+   5. Componentes
+   6. Secciones
+   7. Utilidades
+   8. Media queries
+   ========================================================================== */
+
+
+/* 1. Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Color (concepto "Mapa de campo") */
+  --c-pizarra: #16222A;       /* fondo general */
+  --c-pizarra-alta: #1D2C35;  /* superficies elevadas */
+  --c-isolinea: #2C3B44;      /* isolíneas, divisores y bordes (solo decorativo) */
+  --c-hueso: #E9E6DF;         /* texto principal, 13:1 sobre pizarra */
+  --c-grafito: #8A949B;       /* texto secundario, 5.2:1 sobre pizarra */
+  --c-senal: #E3C04A;         /* acento único: activo, foco y botón principal */
+
+  /* Tipografía */
+  --font-base: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-sm: 0.875rem;                     /* metadatos */
+  --fs-base: 1rem;                       /* cuerpo */
+  --fs-md: 1.25rem;                      /* subtítulos */
+  --fs-lg: 1.75rem;                      /* títulos de proyecto (h3) */
+  --fs-xl: 2.5rem;                       /* títulos de sección (h2) */
+  --fs-hero: clamp(3rem, 9vw, 7rem);     /* nombre en el hero (h1) */
+
+  /* Ancho de Archivo (eje wdth) */
+  --ancho-condensado: 75%;      /* títulos */
+  --ancho-semicondensado: 87.5%; /* metadatos */
+  --ancho-normal: 100%;         /* cuerpo */
+
+  --lectura: 68ch;              /* ancho máximo de línea */
+}
+
+
+/* 2. Tema de Bootstrap
+   Bootstrap define sus colores oscuros en [data-bs-theme=dark]. Usamos el
+   mismo selector: misma especificidad + este archivo carga después = gana.
+   -------------------------------------------------------------------------- */
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--c-pizarra);
+  --bs-body-bg-rgb: 22, 34, 42;
+  --bs-body-color: var(--c-hueso);
+  --bs-body-color-rgb: 233, 230, 223;
+  --bs-emphasis-color: var(--c-hueso);
+  --bs-heading-color: var(--c-hueso);
+  --bs-secondary-color: var(--c-grafito);
+  --bs-secondary-bg: var(--c-pizarra-alta);
+  --bs-tertiary-bg: var(--c-pizarra-alta);
+  --bs-border-color: var(--c-isolinea);
+
+  /* Los enlaces de texto van en hueso; el amarillo solo al pasar el cursor */
+  --bs-link-color: var(--c-hueso);
+  --bs-link-color-rgb: 233, 230, 223;
+  --bs-link-hover-color: var(--c-senal);
+  --bs-link-hover-color-rgb: 227, 192, 74;
+
+  --bs-focus-ring-color: rgba(227, 192, 74, 0.5);
+
+  /* Bootstrap pinta <code> en rosa; aquí va en el color del texto */
+  --bs-code-color: var(--c-hueso);
+
+  --bs-body-font-family: var(--font-base);
+  --bs-body-font-size: var(--fs-base);
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.6;
+}
+
+
+/* 3. Base
+   -------------------------------------------------------------------------- */
+/* El navbar queda fijo arriba: al saltar a una sección, deja ese espacio libre */
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--c-pizarra);
+  font-stretch: var(--ancho-normal);
+}
+
+/* Foco visible para quien navega con teclado */
+:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-toggler:focus-visible {
+  outline: 2px solid var(--c-senal);
+  outline-offset: 3px;
+}
+
+/* Bootstrap dibuja el foco de estos componentes con sombra; aquí no usamos sombras */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+
+/* 4. Tipografía
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-stretch: var(--ancho-condensado);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: var(--fs-hero);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+h4 {
+  font-size: var(--fs-md);
+}
+
+p {
+  max-width: var(--lectura);
+}
+
+
+/* 5. Componentes
+   -------------------------------------------------------------------------- */
+
+/* Enlace "Saltar al contenido": aparece arriba a la izquierda al recibir foco */
+.salto:focus {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1100;
+  padding: 0.5rem 1rem;
+  background-color: var(--c-senal);
+  color: var(--c-pizarra);
+  font-weight: 600;
+}
+
+/* Hueco de contenido que Hans todavía no entrega */
+.pendiente {
+  outline: 1px dotted var(--c-grafito);
+  outline-offset: 2px;
+  color: var(--c-grafito);
+}
+
+
+/* Navbar: colores propios sobre las variables de Bootstrap */
+header {
+  background-color: var(--c-pizarra);
+  border-bottom: 1px solid var(--c-isolinea);
+}
+
+.navbar {
+  --bs-navbar-color: var(--c-grafito);
+  --bs-navbar-hover-color: var(--c-hueso);
+  --bs-navbar-active-color: var(--c-senal);
+  --bs-navbar-brand-color: var(--c-hueso);
+  --bs-navbar-brand-hover-color: var(--c-hueso);
+  --bs-navbar-toggler-border-color: var(--c-grafito);
+  --bs-navbar-toggler-border-radius: 0;
+}
+
+.navbar-brand {
+  font-stretch: var(--ancho-condensado);
+  font-weight: 800;
+}
+
+.nav-link {
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 500;
+}
+
+/* Botón principal: cinta amarilla; al pasar el cursor se vacía */
+.btn-senal {
+  --bs-btn-color: var(--c-pizarra);
+  --bs-btn-bg: var(--c-senal);
+  --bs-btn-border-color: var(--c-senal);
+  --bs-btn-hover-color: var(--c-senal);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--c-senal);
+  --bs-btn-active-color: var(--c-senal);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--c-senal);
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-weight: 600;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.75rem;
+}
+
+/* Botón secundario para abrir un caso: borde gris, sin el amarillo del principal */
+.btn-caso {
+  --bs-btn-color: var(--c-hueso);
+  --bs-btn-border-color: var(--c-grafito);
+  --bs-btn-hover-color: var(--c-hueso);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--c-hueso);
+  --bs-btn-active-color: var(--c-hueso);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--c-hueso);
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-weight: 600;
+}
+
+/* Bootstrap le pone la clase .collapsed al botón cuando el caso está cerrado.
+   Con eso mostramos "Ver caso" o "Cerrar caso" sin JavaScript propio. */
+.btn-caso .cerrar,
+.btn-caso:not(.collapsed) .abrir {
+  display: none;
+}
+
+.btn-caso:not(.collapsed) .cerrar {
+  display: inline;
+}
+
+/* Fila de proyecto: a todo el ancho, separada por isolíneas */
+.proyectos-lista {
+  border-top: 1px solid var(--c-isolinea);
+  margin-top: 2rem;
+}
+
+.proyecto {
+  padding-block: 2.5rem;
+  border-bottom: 1px solid var(--c-isolinea);
+}
+
+.proyecto-resumen {
+  font-size: var(--fs-md);
+}
+
+/* Metadatos: pares dato-valor en dos columnas */
+.proyecto-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+}
+
+.proyecto-meta dt {
+  padding-top: 0.15rem;   /* alinea el texto chico con la línea del valor */
+}
+
+.proyecto-meta dd {
+  margin: 0;
+}
+
+/* Otros proyectos: lista compacta, sin ficha lateral */
+.otros-titulo {
+  margin-top: 4rem;
+}
+
+.otros-lista {
+  border-top: 1px solid var(--c-isolinea);
+  margin-top: 1.5rem;
+}
+
+.otro {
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--c-isolinea);
+}
+
+.otro p {
+  margin-bottom: 0.75rem;
+}
+
+.caso h5 {
+  font-size: var(--fs-md);
+  font-stretch: var(--ancho-condensado);
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+.caso h5:first-child {
+  margin-top: 0;
+}
+
+/* Caso desplegado: superficie elevada */
+.caso {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--c-pizarra-alta);
+}
+
+.caso li {
+  max-width: var(--lectura);
+}
+
+.caso h4 {
+  margin-top: 2rem;
+}
+
+.caso h4:first-child {
+  margin-top: 0;
+}
+
+.caso > :last-child {
+  margin-bottom: 0;
+}
+
+/* Imágenes dentro de un caso: diagrama y galería de wireframes */
+.diagrama {
+  margin-bottom: 2rem;
+}
+
+.galeria figure {
+  margin-bottom: 0;
+}
+
+.diagrama img,
+.galeria img {
+  display: block;
+  width: 100%;
+  height: auto;          /* respeta la proporción original: no se deforma */
+  border: 1px solid var(--c-isolinea);
+}
+
+/* El diagrama no se estira más allá de su tamaño real (se vería borroso) */
+.diagrama img {
+  width: auto;
+  max-width: 100%;
+}
+
+.diagrama figcaption,
+.galeria figcaption {
+  margin-top: 0.5rem;
+}
+
+/* Isolíneas del dipolo: solo trazo, sin relleno */
+.dipolo path {
+  fill: none;
+  stroke: var(--c-isolinea);
+  stroke-width: 1.5;
+  /* pathLength="1" en el HTML hace que cada línea "mida" 1:
+     un guion de largo 1 cubre la línea completa */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.dipolo .senal {
+  stroke: var(--c-senal);
+  stroke-opacity: 0.4;
+}
+
+/* Mover el guion de 1 a 0 hace que la línea se vaya dibujando */
+@keyframes dibujar {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+
+
+/* 6. Secciones
+   -------------------------------------------------------------------------- */
+main > section {
+  padding-block: 4rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;   /* las isolíneas que se salen no generan scroll horizontal */
+  padding-block: 6rem;
+}
+
+.dipolo {
+  position: absolute;
+  top: 50%;
+  right: -4rem;
+  height: 115%;
+  width: auto;
+  aspect-ratio: 515 / 620;
+  transform: translateY(-50%);
+}
+
+.hero-contenido {
+  position: relative;   /* queda por encima del SVG */
+}
+
+.hero-nombre {
+  text-transform: uppercase;   /* única excepción de mayúsculas del sitio */
+  margin-bottom: 1.5rem;
+}
+
+.hero-titulo {
+  font-size: var(--fs-md);
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero-frase {
+  font-size: var(--fs-md);
+  max-width: 40ch;
+}
+
+.hero-apoyo {
+  color: var(--c-grafito);
+  margin-bottom: 2rem;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+
+/* Trayectoria */
+.trayectoria-intro {
+  font-size: var(--fs-md);
+  margin-top: 1.5rem;
+}
+
+.trayectoria-subtitulo,
+.herramientas-nivel {
+  font-size: var(--fs-md);
+  margin-bottom: 1rem;
+}
+
+/* Línea de tiempo: el año a la izquierda funciona como marcador */
+.linea-tiempo,
+.formacion,
+.herramientas-lista {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.linea-tiempo li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.linea-tiempo-fecha {
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;   /* los dígitos ocupan el mismo ancho y se alinean */
+  color: var(--c-grafito);
+}
+
+.linea-tiempo p,
+.formacion p {
+  margin-bottom: 0;
+}
+
+.formacion li {
+  padding-block: 1rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.trayectoria-musica {
+  margin-top: 3rem;
+  color: var(--c-grafito);
+}
+
+/* Herramientas */
+.herramientas-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-block: 0.6rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+/* Ícono monocromático en gris: acompaña al nombre sin competir con él */
+.herramientas-lista .bi {
+  flex: 0 0 1.5rem;     /* todos ocupan el mismo ancho: los nombres quedan alineados */
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+  color: var(--c-grafito);
+}
+
+
+/* Contacto */
+.contacto-intro {
+  font-size: var(--fs-md);
+  margin-top: 1.5rem;
+}
+
+.contacto-lista {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem 0 0;
+  max-width: 40rem;
+}
+
+.contacto-lista li {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.contacto-lista a {
+  font-size: var(--fs-md);
+  overflow-wrap: anywhere;   /* el correo largo se parte en celular en vez de desbordarse */
+}
+
+/* Footer */
+.pie {
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--c-isolinea);
+}
+
+.pie p {
+  margin-bottom: 0.25rem;
+}
+
+
+/* 7. Utilidades
+   -------------------------------------------------------------------------- */
+
+/* Metadatos: semicondensado, gris, en minúsculas con mayúscula inicial */
+.meta {
+  font-size: var(--fs-sm);
+  font-stretch: var(--ancho-semicondensado);
+  font-weight: 500;
+  color: var(--c-grafito);
+}
+
+.lectura {
+  max-width: var(--lectura);
+}
+
+
+/* 8. Media queries
+   -------------------------------------------------------------------------- */
+
+/* Celular: la fecha de la línea de tiempo pasa arriba del texto */
+@media (max-width: 575.98px) {
+  .linea-tiempo li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+/* Celular: menos relleno en el caso para dejarle más ancho al texto */
+@media (max-width: 575.98px) {
+  .caso {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* En pantallas angostas el texto ocupa todo el ancho y queda encima de las
+   isolíneas: se atenúan para que no le resten legibilidad */
+@media (max-width: 991.98px) {
+  .dipolo {
+    opacity: 0.5;
+  }
+}
+
+/* La animación solo corre si el sistema NO pide movimiento reducido.
+   Con movimiento reducido, las líneas aparecen ya dibujadas. */
+@media (prefers-reduced-motion: no-preference) {
+  .dipolo path {
+    animation: dibujar 1.8s ease-out both;
+    animation-delay: calc(var(--i) * 0.12s);   /* --i viene del HTML: 0, 1, 2… */
+  }
+}

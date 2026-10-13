@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dipolo magnético simplificado: polo negativo arriba, positivo abajo -->
+  <rect width="32" height="32" rx="6" fill="#16222A"/>
+  <g fill="none" stroke-width="2">
+    <ellipse cx="16" cy="9" rx="5" ry="2" stroke="#E9E6DF"/>
+    <ellipse cx="16" cy="9" rx="11" ry="4.5" stroke="#8A949B"/>
+    <circle cx="16" cy="22.5" r="2.5" stroke="#E3C04A"/>
+    <circle cx="16" cy="22.5" r="6.5" stroke="#8A949B"/>
+  </g>
+</svg>

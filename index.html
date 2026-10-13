@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hans Alexander Urvina Colín | Portafolio</title>
+  <meta name="description" content="Portafolio de Hans Alexander Urvina Colín. Egresado de Ingeniería en Ciencia y Tecnología del Agua (UAM Lerma), con experiencia en operación retail, datos en Excel/VBA y formación Java Full Stack.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph: título, descripción e imagen que muestran LinkedIn y otras redes al compartir el enlace -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Hans Alexander Urvina Colín | Portafolio">
+  <meta property="og:description" content="Me interesa el punto donde la operación de un negocio se convierte en requerimientos, datos y software.">
+  <meta property="og:url" content="https://alexanderurvina.github.io/">
+  <meta property="og:image" content="https://alexanderurvina.github.io/assets/img/og-portafolio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portada del portafolio: el nombre Hans Alexander Urvina Colín sobre isolíneas de un dipolo magnético.">
+
+  <!-- Bootstrap 5.3 (snippet oficial de getbootstrap.com) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons (íconos monocromáticos para la sección de herramientas) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+
+  <!-- Google Fonts: Archivo (ejes de ancho y peso) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios: van después de Bootstrap para poder sobrescribirlo -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- JavaScript propio. defer: se ejecuta cuando el HTML terminó de cargarse -->
+  <script src="js/main.js" defer></script>
+</head>
+<!-- Scrollspy de Bootstrap: resalta en el menú la sección que se está viendo -->
+<body data-bs-spy="scroll" data-bs-target="#menu">
+  <a class="visually-hidden-focusable salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">Alexander Urvina</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+            <li class="nav-item"><a class="nav-link" href="#herramientas">Herramientas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <!-- Isolíneas de la anomalía magnética de un dipolo inducido (modelo
+           ilustrativo, inclinación 45°, norte arriba). No son datos de la tesis.
+           Lóbulo positivo al sur, negativo al norte. Solo decorativo. -->
+      <svg class="dipolo" viewBox="0 0 515 620" aria-hidden="true" focusable="false">
+        <!-- positivo 0.85 -->
+        <path style="--i: 0" pathLength="1" d="M257 299C261 299 265 300 268 301C272 302 275 303 278 305C281 307 285 309 287 312C290 315 292 318 294 322C296 325 297 329 298 334C298 338 298 342 297 346C296 351 294 355 292 359C289 362 286 366 283 369C279 371 275 374 271 375C267 376 262 377 257 377C253 377 248 376 244 375C240 374 235 371 232 369C228 366 225 362 223 359C221 355 219 351 218 346C217 342 217 338 217 334C218 329 219 325 221 322C222 318 225 315 227 312C230 309 233 307 236 305C240 303 243 302 247 301C250 300 254 299 257 299Z"/>
+        <!-- positivo 0.65 -->
+        <path style="--i: 1" pathLength="1" d="M257 281C263 281 268 282 274 283C279 285 285 287 290 289C295 292 300 295 304 300C309 304 313 309 316 314C320 320 322 327 324 334C325 340 325 348 324 355C323 363 321 370 317 377C313 384 308 390 302 395C296 400 289 404 281 407C274 410 265 411 257 411C249 411 241 410 233 407C226 404 219 400 213 395C207 390 201 384 198 377C194 370 192 363 190 355C189 348 190 340 191 334C192 327 195 320 198 314C202 309 206 304 210 300C215 295 220 292 225 289C230 287 236 285 241 283C246 282 252 281 257 281Z"/>
+        <!-- positivo 0.45 -->
+        <path class="senal" style="--i: 2" pathLength="1" d="M257 267C264 267 271 268 278 270C285 271 292 273 299 276C306 280 313 284 319 289C325 294 332 300 337 308C342 315 346 324 349 334C352 343 353 354 353 365C352 375 349 387 344 397C339 407 332 417 323 425C315 432 304 439 293 444C282 448 269 450 257 450C245 450 233 448 222 444C211 439 200 432 191 425C183 417 176 407 171 397C166 387 163 375 162 365C161 354 163 343 166 334C168 324 173 315 178 308C183 300 189 294 196 289C202 284 209 280 216 276C223 273 230 271 237 270C243 268 250 267 257 267Z"/>
+        <!-- positivo 0.30 -->
+        <path style="--i: 3" pathLength="1" d="M257 257C265 257 273 258 281 260C289 261 298 264 306 267C314 271 322 275 330 281C338 287 347 294 353 302C360 311 367 322 372 334C376 345 379 359 379 373C379 387 377 403 371 416C365 430 356 444 345 455C335 466 320 476 305 482C291 488 273 491 257 491C241 491 224 488 209 482C195 476 180 466 169 455C158 444 149 430 144 416C138 403 136 387 135 373C135 359 139 345 143 334C147 322 154 311 161 302C168 294 177 287 184 281C192 275 201 271 209 267C217 264 225 261 233 260C241 258 249 257 257 257Z"/>
+        <!-- positivo 0.18 -->
+        <path style="--i: 4" pathLength="1" d="M257 250C266 250 275 250 284 252C293 253 302 256 311 259C321 263 331 267 340 273C350 280 360 287 370 297C379 307 389 319 396 334C402 348 409 365 410 383C412 401 410 422 404 440C398 458 387 478 373 493C360 508 341 522 321 531C302 539 279 544 257 544C236 544 213 539 193 531C174 522 155 508 141 493C128 478 117 458 111 440C105 422 103 401 105 383C106 365 112 348 119 334C126 319 136 307 145 297C154 287 165 280 174 273C184 267 194 263 203 259C213 256 222 253 231 252C240 250 249 250 257 250Z"/>
+        <!-- positivo 0.10 -->
+        <path style="--i: 5" pathLength="1" d="M257 244C267 244 276 245 286 246C295 248 305 250 315 254C326 257 337 261 348 268C359 274 372 282 383 293C395 304 409 317 419 334C429 351 439 372 443 394C447 416 448 444 442 468C436 492 424 519 407 540C390 560 366 580 341 591C316 603 285 610 257 610C229 610 199 603 174 591C149 580 125 560 108 540C91 519 78 492 72 468C66 444 68 416 71 394C75 372 86 351 96 334C106 317 120 304 131 293C143 282 156 274 167 268C178 261 189 257 199 254C210 250 219 248 229 246C239 245 248 244 257 244Z"/>
+        <!-- negativo 0.80 -->
+        <path style="--i: 6" pathLength="1" d="M257 122C262 122 267 123 272 123C278 124 283 125 289 126C294 128 301 130 307 133C313 137 321 141 326 147C332 153 339 162 338 170C338 177 332 187 325 192C319 197 306 198 299 200C291 201 286 201 280 201C275 202 272 202 268 202C264 202 261 202 257 202C254 202 251 202 247 202C243 202 239 202 234 201C229 201 223 201 216 200C209 198 196 197 190 192C183 187 177 177 176 170C176 162 183 153 188 147C193 141 201 137 208 133C214 130 220 128 226 126C232 125 237 124 242 123C248 123 252 122 257 122Z"/>
+        <!-- negativo 0.60 -->
+        <path class="senal" style="--i: 7" pathLength="1" d="M257 91C266 91 274 91 282 93C291 94 300 95 309 98C318 101 329 105 339 111C348 116 360 124 368 134C376 143 386 158 386 170C385 181 377 197 366 205C355 212 331 212 319 214C306 216 298 214 290 214C282 214 277 214 272 214C266 214 262 214 257 214C253 214 248 214 243 214C238 214 233 214 225 214C217 214 209 216 196 214C183 212 160 212 149 205C137 197 129 181 129 170C129 158 139 143 147 134C154 124 166 116 176 111C186 105 196 101 206 98C215 95 224 94 232 93C241 91 249 91 257 91Z"/>
+        <!-- negativo 0.40 -->
+        <path style="--i: 8" pathLength="1" d="M257 52C270 52 282 53 295 55C307 57 320 59 334 64C348 69 363 74 377 83C391 92 407 103 418 117C429 132 442 152 442 170C441 187 433 211 416 221C399 231 358 228 338 228C318 229 308 225 297 224C287 224 281 223 275 223C268 223 263 223 257 223C252 223 247 223 240 223C233 223 228 224 217 224C207 225 196 229 177 228C157 228 116 231 99 221C81 211 73 187 73 170C73 152 86 132 96 117C107 103 124 92 138 83C152 74 167 69 181 64C194 59 207 57 220 55C233 53 245 52 257 52Z"/>
+        <!-- negativo 0.25 -->
+        <path style="--i: 9" pathLength="1" d="M257 10C274 10 291 11 308 13C326 16 343 19 362 25C381 32 401 39 420 51C439 64 461 79 475 99C489 119 505 146 505 170C505 193 498 228 474 240C449 252 385 243 356 241C328 240 316 234 302 231C289 229 284 230 277 229C269 229 264 228 257 228C251 228 246 229 238 229C231 230 226 229 212 231C199 234 187 240 159 241C130 243 66 252 41 240C16 228 10 193 10 170C10 146 26 119 40 99C54 79 76 64 95 51C113 39 134 32 153 25C171 19 189 16 207 13C224 11 240 10 257 10Z"/>
+      </svg>
+
+      <div class="container hero-contenido">
+        <h1 id="titulo-inicio" class="hero-nombre">Hans Alexander <span class="d-block">Urvina Colín</span></h1>
+        <p class="hero-titulo">Desarrollador Java Full Stack Jr.</p>
+        <p class="hero-frase">Me interesa el punto donde la operación de un negocio se convierte en requerimientos, datos y software.</p>
+        <p class="hero-apoyo">Egresado de Ingeniería en Ciencia y Tecnología del Agua por la UAM Lerma, con varios años en operación retail y trabajo freelance de análisis de datos y automatización en Excel/VBA.</p>
+        <div class="hero-acciones">
+          <a class="btn btn-senal" href="#proyectos">Ver proyectos</a>
+          <a href="https://www.linkedin.com/in/hans-alexander-urvina-colin">LinkedIn</a>
+          <a href="https://github.com/alexanderurvina">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" aria-labelledby="titulo-proyectos">
+      <div class="container">
+        <h2 id="titulo-proyectos">Proyectos</h2>
+
+        <div class="proyectos-lista">
+          <!-- Rutta -->
+          <article class="proyecto" aria-labelledby="rutta-titulo">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <h3 id="rutta-titulo">Rutta, e-commerce de equipo</h3>
+                <p class="proyecto-resumen">Tienda en línea de equipo de senderismo para personas que empiezan, organizada por nivel de experiencia. Proyecto integrador del bootcamp Java Full Stack de Generation México.</p>
+                <p><strong>Mi parte:</strong> facilitación del equipo, wireframes en Figma, definición del catálogo de productos y apoyo en frontend.</p>
+                <button class="btn btn-caso collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-rutta" aria-expanded="false" aria-controls="caso-rutta">
+                  <span class="abrir">Ver caso<span class="visually-hidden"> de Rutta</span></span>
+                  <span class="cerrar">Cerrar caso<span class="visually-hidden"> de Rutta</span></span>
+                </button>
+              </div>
+              <div class="col-lg-4">
+                <dl class="proyecto-meta">
+                  <dt class="meta">Rol</dt>
+                  <dd>Facilitación</dd>
+                  <dt class="meta">Equipo</dt>
+                  <dd>10 personas</dd>
+                  <dt class="meta">Año</dt>
+                  <dd>2026</dd>
+                  <dt class="meta">Herramientas</dt>
+                  <dd>HTML, CSS, Bootstrap, JavaScript, Git/GitHub, Figma</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="collapse" id="caso-rutta">
+              <div class="caso">
+                <h4>Contexto</h4>
+                <p>Rutta es el proyecto integrador del bootcamp: un e-commerce desarrollado por un equipo de 10 personas. Es una tienda en línea de equipo de senderismo para personas que empiezan. Su catálogo se organiza en tres categorías (Apparel, Footwear y Equipment) y cuatro niveles de experiencia (Principiante, Básico, Intermedio y Avanzado).</p>
+
+                <h4>Qué hice</h4>
+                <ul>
+                  <li>Facilité la dinámica del equipo: moderé las sesiones cuando se estancaban, señalé cuando algo se estaba haciendo mal y estructuré cómo abordar los temas.</li>
+                  <li>Elaboré en Figma los wireframes del catálogo, del registro de usuarios y de preguntas frecuentes y contacto.</li>
+                  <li>Definí el catálogo de productos (3 categorías en 4 niveles) con su ficha técnica.</li>
+                  <li>Apoyé en el frontend y en la definición de las constantes y la estructura del JavaScript del registro de usuarios.</li>
+                </ul>
+
+                <h4>Decisiones</h4>
+                <ul>
+                  <li><strong>Un catálogo de 10 productos repartidos de forma equilibrada entre categorías.</strong> Lo pensé como un negocio real: un catálogo variado alcanza a más tipos de clientes potenciales.</li>
+                  <li><strong>Diseñé la mayor parte del modelo relacional de la base de datos.</strong> Decidí las entidades del modelo y sus atributos con base en mi experiencia en retail.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <p>En desarrollo: el proyecto ya llega a la base de datos (modelo relacional). La presentación final es en octubre de 2026.</p>
+
+                <h4>Evidencia</h4>
+                <ul>
+                  <li><a href="https://github.com/Sofiaacastillo/Proyecto-Rutta">Repositorio del equipo en GitHub</a></li>
+                </ul>
+
+                <figure class="diagrama">
+                  <a href="assets/modelo-entidad-relacion-rutta.png">
+                    <img src="assets/modelo-entidad-relacion-rutta.png" width="924" height="512" loading="lazy" alt="Diagrama entidad-relación de la base de datos de Rutta con siete tablas: category, product, product_has_color, color, user, order y order_details. Un producto pertenece a una categoría y puede tener varios colores; un usuario hace pedidos y cada pedido tiene su detalle de productos, cantidad y precio unitario.">
+                  </a>
+                  <figcaption class="meta">Modelo entidad-relación de la base de datos</figcaption>
+                </figure>
+
+                <p class="meta">Wireframes que hice en Figma. Clic en cada uno para verlo completo.</p>
+                <div class="row g-3 galeria">
+                  <figure class="col-md-4">
+                    <a href="assets/wireframes_rutta/catalogo.png">
+                      <img src="assets/wireframes_rutta/catalogo.png" width="1200" height="930" loading="lazy" alt="Wireframe del catálogo de Rutta: accesos por categoría y tarjetas de producto con precio, un bloque «¿Es para ti?» con el nivel recomendado, características y botones para ver el producto o agregarlo al carrito.">
+                    </a>
+                    <figcaption class="meta">Catálogo (el catálogo final se ajustó a 3 categorías)</figcaption>
+                  </figure>
+                  <figure class="col-md-4">
+                    <a href="assets/wireframes_rutta/registro.png">
+                      <img src="assets/wireframes_rutta/registro.png" width="1200" height="1036" loading="lazy" alt="Wireframe de la pantalla de registro de Rutta: formulario con nombre completo, correo electrónico y contraseña, y botón «Crea tu cuenta».">
+                    </a>
+                    <figcaption class="meta">Registro de usuarios</figcaption>
+                  </figure>
+                  <figure class="col-md-4">
+                    <a href="assets/wireframes_rutta/faqs-contacto.png">
+                      <img src="assets/wireframes_rutta/faqs-contacto.png" width="1200" height="1012" loading="lazy" alt="Wireframe de preguntas frecuentes y contacto de Rutta: lista desplegable de preguntas a la izquierda y formulario de contacto a la derecha.">
+                    </a>
+                    <figcaption class="meta">Preguntas frecuentes y contacto</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Agenda de contactos -->
+          <article class="proyecto" aria-labelledby="agenda-titulo">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <h3 id="agenda-titulo">Agenda de contactos en Java</h3>
+                <p class="proyecto-resumen">Agenda de contactos en Java desarrollada por un equipo de 9 personas en el Hackathon 2 del bootcamp.</p>
+                <p><strong>Mi parte:</strong> propuse dividir el proyecto en capas y escribí el menú por consola.</p>
+                <button class="btn btn-caso collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-agenda" aria-expanded="false" aria-controls="caso-agenda">
+                  <span class="abrir">Ver caso<span class="visually-hidden"> de la agenda de contactos</span></span>
+                  <span class="cerrar">Cerrar caso<span class="visually-hidden"> de la agenda de contactos</span></span>
+                </button>
+              </div>
+              <div class="col-lg-4">
+                <dl class="proyecto-meta">
+                  <dt class="meta">Rol</dt>
+                  <dd>Estructura del proyecto y menú</dd>
+                  <dt class="meta">Equipo</dt>
+                  <dd>9 personas</dd>
+                  <dt class="meta">Año</dt>
+                  <dd>2026</dd>
+                  <dt class="meta">Herramientas</dt>
+                  <dd>Java 21, Gradle, JUnit 6 (pruebas del equipo), Git/GitHub con ramas y Pull Requests</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="collapse" id="caso-agenda">
+              <div class="caso">
+                <h4>Contexto</h4>
+                <p>Proyecto del Hackathon 2 del bootcamp: una agenda de contactos en Java, desarrollada por un equipo de 9 personas.</p>
+
+                <h4>Qué hice</h4>
+                <ul>
+                  <li>Propuse dividir el proyecto en capas: <code>Contacto</code> (modelo), <code>Agenda</code> (lógica de negocio), <code>Menu</code> (presentación por consola) y <code>Main</code> (punto de entrada).</li>
+                  <li>Escribí <code>Menu.java</code>: un ciclo <code>do-while</code> con 8 opciones, un <code>switch</code> y validación de la entrada con <code>hasNextInt</code>.</li>
+                  <li>Reescribí <code>Main.java</code>.</li>
+                </ul>
+
+                <h4>Decisiones</h4>
+                <ul>
+                  <li><strong>Separar el proyecto en capas.</strong> Así cada integrante podía trabajar su clase en su propia rama, sin pisar el trabajo de los demás.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <p>La versión final del equipo reemplazó la consola por una interfaz Swing. <code>Menu.java</code> sigue en el repositorio, pero ya no se usa.</p>
+
+                <h4>Evidencia</h4>
+                <ul>
+                  <li><a href="https://github.com/Sebastian-Aldaco/Agenda">Repositorio del equipo en GitHub</a></li>
+                  <li><a href="https://github.com/Sebastian-Aldaco/Agenda/pull/5">Mi Pull Request (#5)</a></li>
+                  <li><a href="https://github.com/Sebastian-Aldaco/Agenda/blob/main/src/main/java/org/generation/Menu.java"><code>Menu.java</code></a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gryffindor Resistance (Hackathon 1) -->
+          <article class="proyecto" aria-labelledby="gryffindor-titulo">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <h3 id="gryffindor-titulo">Gryffindor Resistance</h3>
+                <p class="proyecto-resumen">Sitio web estático sobre la casa Gryffindor, hecho por un equipo de 12 personas en el Hackathon 1 del bootcamp: personajes, formulario de reclutamiento y tienda con carrito.</p>
+                <p><strong>Mi parte:</strong> escribí el HTML y el CSS del formulario de reclutamiento y propuse dividir su desarrollo en capas.</p>
+                <button class="btn btn-caso collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-gryffindor" aria-expanded="false" aria-controls="caso-gryffindor">
+                  <span class="abrir">Ver caso<span class="visually-hidden"> de Gryffindor Resistance</span></span>
+                  <span class="cerrar">Cerrar caso<span class="visually-hidden"> de Gryffindor Resistance</span></span>
+                </button>
+              </div>
+              <div class="col-lg-4">
+                <dl class="proyecto-meta">
+                  <dt class="meta">Rol</dt>
+                  <dd>Frontend</dd>
+                  <dt class="meta">Equipo</dt>
+                  <dd>12 personas</dd>
+                  <dt class="meta">Año</dt>
+                  <dd>2026</dd>
+                  <dt class="meta">Herramientas</dt>
+                  <dd>HTML, CSS, Bootstrap 5.3, JavaScript, localStorage, Git/GitHub</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="collapse" id="caso-gryffindor">
+              <div class="caso">
+                <h4>Contexto</h4>
+                <p>Proyecto del Hackathon 1 del bootcamp: un sitio web estático, sin backend ni base de datos, sobre la casa Gryffindor. Los voluntarios que se registran en el formulario se guardan en el navegador con <code>localStorage</code> y se muestran como tarjetas.</p>
+
+                <h4>Qué hice</h4>
+                <ul>
+                  <li>Escribí el formulario de reclutamiento: nombre, correo, edad (de 11 a 120), cualidad y motivo, todos obligatorios, con un mensaje de error para cada campo.</li>
+                  <li>Escribí sus estilos y definí los colores de la casa como variables CSS en <code>:root</code>.</li>
+                  <li>Propuse dividir el desarrollo del formulario en cuatro capas: estructura y presentación (HTML y CSS), DOM y eventos, persistencia en <code>localStorage</code>, y render de las tarjetas.</li>
+                </ul>
+                <p>El JavaScript del formulario lo escribieron otros integrantes del equipo.</p>
+
+                <h4>Decisiones</h4>
+                <ul>
+                  <li><strong>Usar los atributos <code>name</code> de cada campo como contrato con el JavaScript.</strong> Así mis compañeros podían leer los datos del formulario sin depender de cómo estuviera armado el HTML.</li>
+                  <li><strong>Dividir el formulario en capas.</strong> Así cada quien trabajaba en lo suyo, sin generar ruido que confundiera a los demás.</li>
+                  <li><strong>Pensar el formulario como el de un sitio de reclutamiento.</strong> Por eso, además de los datos de contacto, pide la cualidad que mejor describe a la persona y su motivo para unirse.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <p>El sitio está publicado en GitHub Pages. Los voluntarios registrados se guardan en el navegador y se vuelven a mostrar al recargar la página.</p>
+                <p>La validación que diseñé en el formulario no llega a mostrarse, porque el JavaScript no la activa al enviar (falta llamar a <code>checkValidity()</code>). Quedó registrada en el backlog del equipo.</p>
+
+                <h4>Evidencia</h4>
+                <ul>
+                  <li><a href="https://danielcastroperez.github.io/Gryffindor-Resistance/">Sitio publicado</a></li>
+                  <li><a href="https://github.com/DanielCastroPerez/Gryffindor-Resistance">Repositorio del equipo en GitHub</a></li>
+                  <li><a href="https://github.com/DanielCastroPerez/Gryffindor-Resistance/pull/7">Mi Pull Request (#7)</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="otros-titulo">Otros proyectos</h3>
+        <div class="otros-lista">
+          <!-- Tesis -->
+          <article class="otro" aria-labelledby="tesis-titulo">
+            <h4 id="tesis-titulo">Caracterización magnética de un sistema acuífero</h4>
+            <p>Tesis de licenciatura: levantamiento magnético terrestre en una zona de disposición final de residuos en Almoloya del Río, Estado de México. Proyecto individual.</p>
+            <p class="meta">2025. Magnetómetro G-857, Surfer 16 y Excel.</p>
+            <button class="btn btn-caso btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caso-tesis" aria-expanded="false" aria-controls="caso-tesis">
+              <span class="abrir">Ver detalle<span class="visually-hidden"> de la tesis</span></span>
+              <span class="cerrar">Cerrar detalle<span class="visually-hidden"> de la tesis</span></span>
+            </button>
+
+            <div class="collapse" id="caso-tesis">
+              <div class="caso">
+                <h5>Contexto</h5>
+                <p>Tesis de licenciatura en Ingeniería en Ciencia y Tecnología del Agua (UAM Lerma): <cite>Caracterización magnética del sistema acuífero en una zona de disposición final de residuos en Almoloya del Río</cite>. No está publicada en línea.</p>
+                <p>Proyectos relacionados en la carrera: servicio social en Santa María Jajalpa (19 muestras de suelo para conductividad hidráulica y porosidad efectiva) y un proyecto de infiltración con sondeos eléctricos verticales.</p>
+
+                <h5>Qué hice</h5>
+                <ul>
+                  <li>Planifiqué la ruta de medición y realicé el levantamiento magnético terrestre en 0.88 km² con un magnetómetro G-857.</li>
+                  <li>Procesé los datos, elaboré los mapas magnéticos en Surfer 16 y los perfiles en Excel.</li>
+                  <li>Interpreté los perfiles y mapas.</li>
+                </ul>
+
+                <h5>Decisiones</h5>
+                <ul>
+                  <li><strong>Estudiar un basurero a cielo abierto.</strong> Quería conocer cómo dispone el gobierno de nuestros residuos.</li>
+                  <li><strong>Usar el método magnético.</strong> Ya había usado sondeos eléctricos verticales en otros experimentos, pero para llegar profundo necesitan abrir mucho los electrodos, y el área era pequeña. El método magnético daba una visión más amplia de los estratos.</li>
+                </ul>
+
+                <h5>Resultado</h5>
+                <p>A partir de los perfiles y mapas magnéticos, la tesis interpreta filtraciones de lixiviados hacia el acuífero que alimenta el pozo de la región de Santiago Tianguistenco y Almoloya del Río.</p>
+
+                <h5>Figuras de la tesis</h5>
+                <div class="row g-3 galeria">
+                  <figure class="col-md-4">
+                    <a href="assets/img/planificacion-ruta.png">
+                      <img src="assets/img/planificacion-ruta.png" width="362" height="313" loading="lazy" alt="Imagen satelital del área de estudio con coordenadas UTM y los puntos de medición planeados, marcados en azul, distribuidos en líneas sobre la zona de disposición de residuos.">
+                    </a>
+                    <figcaption class="meta">Planificación de la ruta de medición. Imagen base: Google Earth.</figcaption>
+                  </figure>
+                  <figure class="col-md-4">
+                    <a href="assets/img/campo-magnetico-total.png">
+                      <img src="assets/img/campo-magnetico-total.png" width="723" height="493" loading="lazy" alt="Mapa del campo magnético total corregido sobre una imagen satelital del área de estudio, con isolíneas, coordenadas UTM y una escala de color de 35,200 a 40,800 nanoteslas.">
+                    </a>
+                    <figcaption class="meta">Campo magnético total corregido (correcciones diurnas y regionales), elaborado en Surfer 16. Imagen base: Google Earth.</figcaption>
+                  </figure>
+                  <figure class="col-md-4">
+                    <a href="assets/img/perfiles-magnetometro.png">
+                      <img src="assets/img/perfiles-magnetometro.png" width="603" height="391" loading="lazy" alt="Cuatro gráficas de los perfiles magnéticos 9 a 12: campo magnético en nanoteslas contra la distancia en metros a lo largo de cada perfil.">
+                    </a>
+                    <figcaption class="meta">Perfiles magnéticos 9 a 12, elaborados en Excel</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trayectoria" aria-labelledby="titulo-trayectoria">
+      <div class="container">
+        <h2 id="titulo-trayectoria">Trayectoria</h2>
+        <p class="trayectoria-intro">Estudié Ingeniería en Ciencia y Tecnología del Agua, donde aprendí a levantar datos en campo y convertirlos en mapas para interpretar lo que no se ve. Después pasé varios años en operación retail, viendo de cerca cómo funciona un negocio de cara al cliente. En paralelo, como freelance, analicé datos y automaticé procesos en Excel/VBA. Hoy estudio Java Full Stack para llevar esa experiencia a requerimientos y software.</p>
+
+        <div class="row gy-5 mt-2">
+          <div class="col-lg-7">
+            <h3 class="trayectoria-subtitulo">Experiencia</h3>
+            <ol class="linea-tiempo">
+              <li>
+                <span class="linea-tiempo-fecha">06/2024 – 07/2026</span>
+                <div>
+                  <strong>Nike</strong>
+                  <p>Sales Advisor. Almacén, cajas, atención al cliente y producto.</p>
+                </div>
+              </li>
+              <li>
+                <span class="linea-tiempo-fecha">2022 – 2024</span>
+                <div>
+                  <strong>H&amp;M</strong>
+                  <p>Sales Advisor. Almacén, cajas, atención al cliente y producto.</p>
+                </div>
+              </li>
+              <li>
+                <span class="linea-tiempo-fecha">2022 – 2024</span>
+                <div>
+                  <strong>El Punto</strong>
+                  <p>Co-fundador de un bar y espacio de eventos.</p>
+                </div>
+              </li>
+              <li>
+                <span class="linea-tiempo-fecha">03/2021 – 11/2025</span>
+                <div>
+                  <strong>Freelance</strong>
+                  <p>Análisis de datos y automatización en Excel/VBA; reportes y KPIs para la UIPEE del Ayuntamiento de Lerma.</p>
+                </div>
+              </li>
+              <li>
+                <span class="linea-tiempo-fecha">2019 – 2020</span>
+                <div>
+                  <strong>American Eagle</strong>
+                  <p>Sales Advisor. Almacén, cajas, atención al cliente y producto.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="col-lg-5">
+            <h3 class="trayectoria-subtitulo">Formación</h3>
+            <ul class="formacion">
+              <li>
+                <strong>Ingeniería en Ciencia y Tecnología del Agua</strong>
+                <p>Universidad Autónoma Metropolitana, Unidad Lerma</p>
+                <p class="meta">Estudios concluidos. Titulación en trámite.</p>
+              </li>
+              <li>
+                <strong>Java Full Stack</strong>
+                <p>Generation México</p>
+                <p class="meta">2026</p>
+              </li>
+              <li>
+                <strong>Introducción a Java</strong>
+                <p>Accenture</p>
+                <p class="meta">Agosto de 2026</p>
+              </li>
+              <li>
+                <strong>Curso propedéutico de inteligencia artificial</strong>
+                <p>Tecnológico Nacional de México (TecNM)</p>
+              </li>
+              <li>
+                <strong>Inglés</strong>
+                <p>Nivel B1</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="trayectoria-musica">Así como los sistemas deben ser actualizados y depurados, yo depuro mi ser creando música, que actualiza mi mente y me brinda claridad para seguir al día.</p>
+      </div>
+    </section>
+
+    <section id="herramientas" aria-labelledby="titulo-herramientas">
+      <div class="container">
+        <h2 id="titulo-herramientas">Herramientas</h2>
+
+        <div class="row gy-4 mt-2">
+          <div class="col-md-4">
+            <h3 class="herramientas-nivel">Uso con soltura</h3>
+            <ul class="herramientas-lista">
+              <li><i class="bi bi-file-earmark-spreadsheet" aria-hidden="true"></i>Excel y VBA</li>
+              <li><i class="bi bi-graph-up" aria-hidden="true"></i>Análisis e interpretación de datos</li>
+              <li><i class="bi bi-map" aria-hidden="true"></i>Surfer</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="herramientas-nivel">Usado en proyectos formativos</h3>
+            <ul class="herramientas-lista">
+              <li><i class="bi bi-filetype-html" aria-hidden="true"></i>HTML</li>
+              <li><i class="bi bi-filetype-css" aria-hidden="true"></i>CSS</li>
+              <li><i class="bi bi-bootstrap" aria-hidden="true"></i>Bootstrap</li>
+              <li><i class="bi bi-filetype-js" aria-hidden="true"></i>JavaScript</li>
+              <li><i class="bi bi-filetype-java" aria-hidden="true"></i>Java (POO)</li>
+              <li><i class="bi bi-github" aria-hidden="true"></i>Git y GitHub</li>
+              <li><i class="bi bi-database" aria-hidden="true"></i>SQL básico</li>
+              <li><i class="bi bi-kanban" aria-hidden="true"></i>Scrum</li>
+              <li><i class="bi bi-vector-pen" aria-hidden="true"></i>Figma</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="herramientas-nivel">Fundamentos</h3>
+            <ul class="herramientas-lista">
+              <li><i class="bi bi-plug" aria-hidden="true"></i>Consumo de APIs</li>
+              <li><i class="bi bi-check2-square" aria-hidden="true"></i>Pruebas unitarias a nivel introductorio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p class="contacto-intro">Me interesan los roles de análisis funcional, requerimientos, procesos y operaciones con enfoque tecnológico.</p>
+
+        <ul class="contacto-lista">
+          <li>
+            <span class="meta">Correo</span>
+            <a href="mailto:alexanderurvinacolin@gmail.com">alexanderurvinacolin@gmail.com</a>
+          </li>
+          <li>
+            <span class="meta">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/hans-alexander-urvina-colin">hans-alexander-urvina-colin</a>
+          </li>
+          <li>
+            <span class="meta">GitHub</span>
+            <a href="https://github.com/alexanderurvina">alexanderurvina</a>
+          </li>
+          <li>
+            <span class="meta">CV</span>
+            <a href="assets/docs/CV_Hans_Urvina_Analista_Funcional.pdf">Descargar CV (PDF)</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container">
+      <p>Hans Alexander Urvina Colín</p>
+      <p class="meta">Sitio hecho con HTML, CSS y Bootstrap. <a href="https://github.com/alexanderurvina/alexanderurvina.github.io">Ver el código en GitHub</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (incluye Popper). Se necesita para el menú móvil y los casos desplegables -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
